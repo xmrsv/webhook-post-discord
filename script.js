@@ -6,14 +6,14 @@ const usernameText = document.getElementById('username');
 const messageText = document.getElementById('message');
 const avatarUrlText = document.getElementById('avatar-url');
 const formButton = document.getElementById('form-button');
+const webhookUrlText = document.getElementById('webhook-url');
 
-const webhook =
-  'https://discord.com/api/webhooks/1065341764833120319/6puiC_27IqqzyD3uVuU4TKFr_Raeb7kmRKOyAqBTUM95WJJUswytwi6ASbkeQz3bWBkN';
+let webhook = '';
 
 const message = {
-  content: 'Hello world',
-  username: 'Nodejs',
-  avatar_url: 'https://i.imgur.com/4ZQ9Z0C.png',
+  content: '',
+  username: '',
+  avatar_url: '',
 };
 
 const postWebhookJson = async (webhook, message) => {
@@ -48,7 +48,7 @@ formButton.addEventListener('click', async (e) => {
   message.content = messageText.value;
   message.username = usernameText.value;
   message.avatar_url = avatarUrlText.value;
-
+  webhook = webhookUrlText.value;
   postWebhookJson(webhook, message);
 });
 

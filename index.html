@@ -17,8 +17,14 @@
   </head>
   <body>
     <main>
-      <form class="form-post">
+      <div class="form-post">
         <h1>Datos del mensaje</h1>
+        <input
+          type="text"
+          id="webhook-url"
+          name="webhook-url"
+          placeholder="URL del Webhook"
+        />
         <input
           type="text"
           id="username"
@@ -39,7 +45,7 @@
         <button id="form-button" class="form-post__submit" >
           Enviar mensaje
         </button>
-      </form>
+      </div>
     </main>
   </body>
 </html>
