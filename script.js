@@ -1,5 +1,5 @@
 /**
- * TODO: Rorrar el codigo
+ * TODO: Reordenar el codigo
  */
 
 const usernameText = document.getElementById('username');
